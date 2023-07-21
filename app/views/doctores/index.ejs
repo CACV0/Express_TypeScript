@@ -1,0 +1,46 @@
+<h1>Doctores</h1>
+
+<a href="/doctores/crear">Crear doctor</a>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Especialidad</th>
+            <th>Consultorio</th>
+            <th>Correo</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% doctores.forEach((doctor)=> { %>
+            <tr>
+                <td>
+                    <%= doctor.id %>
+                </td>
+                <td>
+                    <%= doctor.nombre %>
+                </td>
+                <td>
+                    <%= doctor.apellido %>
+                </td>
+                <td>
+                    <%= doctor.especialidad %>
+                </td>
+                <td>
+                    <%= doctor.consultorio %>
+                </td>
+                <td>
+                    <%= doctor.correo %>
+                </td>
+                <td>
+                    <a href="/doctores/<%= doctor.id %>/mostrar">Mostrar</a>
+                    <a href="/doctores/<%= doctor.id %>/editar">Editar</a>
+                    <a href="/doctores/<%= doctor.id %>/eliminar">Eliminar</a>
+                </td>
+            </tr>
+            <% }); %>
+    </tbody>
+</table>

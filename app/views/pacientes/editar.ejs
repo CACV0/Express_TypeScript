@@ -1,0 +1,22 @@
+<h1>Editar Paciente</h1>
+
+<form method="POST" action="/pacientes/<%= paciente.id %>/editar">
+    <label for="nombre">Nombre:</label>
+    <input type="text" name="nombre" id="nombre" value="<%= paciente.nombre %>" required>
+    <br>
+    <label for="cedula">Cédula:</label>
+    <input type="text" name="cedula" id="cedula" value="<%= paciente.cedula %>" required>
+    <br>
+    <label for="apellido">Apellido:</label>
+    <input type="text" name="apellido" id="apellido" value="<%= paciente.apellido %>" required>
+    <br>
+    <label for="edad">Edad:</label>
+    <input type="number" name="edad" id="edad" value="<%= paciente.edad %>" required>
+    <br>
+    <label for="telefono">Teléfono:</label>
+    <input type="text" name="telefono" id="telefono" value="<%= paciente.telefono %>" required>
+    <br>
+    <button type="submit">Guardar cambios</button>
+</form>
+
+<a href="/pacientes">Volver</a>

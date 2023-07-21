@@ -1,0 +1,19 @@
+<h1>Crear Cita</h1>
+
+<form method="POST" action="/citas/crear">
+    <label for="numeroDocumentoPaciente">Número de Documento Paciente:</label>
+    <input type="text" name="numeroDocumentoPaciente" id="numeroDocumentoPaciente" required>
+    <br>
+    <label for="especialidad">Especialidad:</label>
+    <input type="text" name="especialidad" id="especialidad" required>
+    <br>
+    <label for="doctorId">ID Doctor:</label>
+    <input type="number" name="doctorId" id="doctorId" required>
+    <br>
+    <label for="pacienteId">ID Paciente:</label>
+    <input type="number" name="pacienteId" id="pacienteId" required>
+    <br>
+    <button type="submit">Crear</button>
+</form>
+
+<a href="/citas">Volver</a>

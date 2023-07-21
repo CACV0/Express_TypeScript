@@ -1,0 +1,22 @@
+<h1>Editar Doctor</h1>
+
+<form method="POST" action="/doctores/<%= doctor.id %>/editar">
+    <label for="nombre">Nombre:</label>
+    <input type="text" name="nombre" id="nombre" value="<%= doctor.nombre %>" required>
+    <br>
+    <label for="apellido">Apellido:</label>
+    <input type="text" name="apellido" id="apellido" value="<%= doctor.apellido %>" required>
+    <br>
+    <label for="especialidad">Especialidad:</label>
+    <input type="text" name="especialidad" id="especialidad" value="<%= doctor.especialidad %>" required>
+    <br>
+    <label for="consultorio">Consultorio:</label>
+    <input type="text" name="consultorio" id="consultorio" value="<%= doctor.consultorio %>" required>
+    <br>
+    <label for="correo">Correo:</label>
+    <input type="email" name="correo" id="correo" value="<%= doctor.correo %>" required>
+    <br>
+    <button type="submit">Guardar cambios</button>
+</form>
+
+<a href="/doctores">Volver</a>

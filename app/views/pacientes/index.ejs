@@ -1,0 +1,46 @@
+<h1>Pacientes</h1>
+
+<a href="/pacientes/crear">Crear paciente</a>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Cédula</th>
+            <th>Apellido</th>
+            <th>Edad</th>
+            <th>Teléfono</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% pacientes.forEach((paciente)=> { %>
+            <tr>
+                <td>
+                    <%= paciente.id %>
+                </td>
+                <td>
+                    <%= paciente.nombre %>
+                </td>
+                <td>
+                    <%= paciente.cedula %>
+                </td>
+                <td>
+                    <%= paciente.apellido %>
+                </td>
+                <td>
+                    <%= paciente.edad %>
+                </td>
+                <td>
+                    <%= paciente.telefono %>
+                </td>
+                <td>
+                    <a href="/pacientes/<%= paciente.id %>/mostrar">Mostrar</a>
+                    <a href="/pacientes/<%= paciente.id %>/editar">Editar</a>
+                    <a href="/pacientes/<%= paciente.id %>/eliminar">Eliminar</a>
+                </td>
+            </tr>
+            <% }); %>
+    </tbody>
+</table>

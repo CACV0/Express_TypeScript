@@ -1,0 +1,20 @@
+<h1>Editar Cita</h1>
+
+<form method="POST" action="/citas/<%= cita.id %>/editar">
+    <label for="numeroDocumentoPaciente">Número de Documento Paciente:</label>
+    <input type="text" name="numeroDocumentoPaciente" id="numeroDocumentoPaciente"
+        value="<%= cita.numeroDocumentoPaciente %>" required>
+    <br>
+    <label for="especialidad">Especialidad:</label>
+    <input type="text" name="especialidad" id="especialidad" value="<%= cita.especialidad %>" required>
+    <br>
+    <label for="doctorId">ID Doctor:</label>
+    <input type="number" name="doctorId" id="doctorId" value="<%= cita.doctorId %>" required>
+    <br>
+    <label for="pacienteId">ID Paciente:</label>
+    <input type="number" name="pacienteId" id="pacienteId" value="<%= cita.pacienteId %>" required>
+    <br>
+    <button type="submit">Guardar cambios</button>
+</form>
+
+<a href="/citas">Volver</a>

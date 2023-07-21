@@ -1,0 +1,26 @@
+<!-- index.ejs -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Seleccionar formulario</title>
+</head>
+
+<body>
+    <h1>Selecciona un formulario:</h1>
+    <select id="formularioSelect">
+        <option value="doctores">Doctores</option>
+        <option value="pacientes">Pacientes</option>
+        <option value="citas">Citas</option>
+    </select>
+
+    <script>
+        document.getElementById("formularioSelect").addEventListener("change", function () {
+            var selectedForm = this.value;
+            window.location.href = "/" + selectedForm;
+        });
+    </script>
+</body>
+
+</html>
